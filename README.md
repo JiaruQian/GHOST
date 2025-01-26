@@ -1,1 +1,6 @@
-# GHOST
+# GHOST: Generalizable One-Shot Federated Graph Learning with Proxy-Based Topology Knowledge Retention
+
+# Abstract
+
+Federated Graph Learning (FGL) proposes an effective approach to collaboratively training Graph Neural Networks (GNNs) while maintaining privacy. Nevertheless, communication efficiency becomes a critical bottleneck in environments with limited resources. In this context, one-shot FGL emerges as a promising solution by restricting communication to a single round. However, prevailing FGL methods face two key challenges in the one-shot setting: 1) They heavily rely on gradual personalized optimization over multiple rounds, undermining the capability of the global model to efficiently generalize across diverse graph structures.
+2) They are prone to overfitting to local data distributions due to extreme structural bias, leading to catastrophic forgetting. To address these issues, we introduce **GHOST**, an innovative one-shot FGL framework. In GHOST, we establish a proxy model for each client to leverage diverse local knowledge and integrate it to train the global model. During training, we compute the Topology-Consistency Criterion to identify and consolidate parameters essential for capturing topological knowledge, thereby mitigating catastrophic forgetting. Extensive experiments on real-world tasks demonstrate the superiority and generalization capability of GHOST. 
