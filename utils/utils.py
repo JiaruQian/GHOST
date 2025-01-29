@@ -43,7 +43,6 @@ def construct_graph(node_logits, adj_logits, k=5):
     adjacency_matrix = torch.zeros_like(adj_logits)
 
     topk_values, topk_indices = torch.topk(adj_logits, k=k, dim=1)
-    # 检查 adj_logits 中是否有 NaN 或 Inf
 
     for i in range(node_logits.shape[0]):
         adjacency_matrix[i, topk_indices[i]] = 1
